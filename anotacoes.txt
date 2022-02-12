@@ -1,0 +1,197 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML
+h1 - titulo
+p - paragrafo
+tr - linha
+td - coluna
+ul - lista
+li - tag para alinhar e colocar numeros na lista 
+placeholder = deixa uma mensagem gravada no campo do imput dentro do HTML (um guia) Ex: Digite o Texto aqui 
+button - tag de adicionar um botão no HTMl, mas podemos colocar a opção onClick (ao clicar). EX <button onClick="adicionarFilmeFavorito()">adicionar filme</button>
+input - adicionar espaço para o usuario escrever algo ("campo branco"). OBS: dentro dos input podevem haver um id que será declarado com o # EX: <input type = "text" id="filme" nome "filme" placeholder="Filme" >
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CSS 
+
+Sempre vai ser propriedade: valor
+Lembrar: pesquisar no google css box model 
+site MDN: pesquisar o que quer fazer no google usando ele. Ex: como arrendondar imagem MDN
+site para pegar as fotos online = https://unavatar.now.sh/
+site para ver cores: https://www.materialpalette.com/
+site para ver fontes: https://fonts.google.com/
+site para arrumar as sombras e estilizar: https://html-css-js.com/css/generator/box-shadow/
+site para usar e criar tags de compartilhamento de codigos, só copiar o link do projeto e colocar na opção desejada: https://www.sharelinkgenerator.com/
+
+
+
+auto = o navegador irá calcular automaticamente o valor do pixel para o monitor 
+
+width = largura 
+height = altura 
+display = block Obs: os elementos não concorrem entre si pelo espaço da pagina, pq ele fica bloqueado
+background-image = para colocar imagem de fundo do navegador, precisa colocar a funçao url. Ex: background-image: url('https://image.freepik.com/vetores-gratis/a-tecnologia-moderna-tem-muitos-usos_49459-130.jpg'); 
+transform = usada para quando quer mexer em uma posição de um elemento, para fora do bloco Ex: transform: translateY(-50px);
+
+Obs: para alinhar elementos na tela, usar:
+margin-left: auto;
+margin-right: auto;
+display: block;
+
+h1 {
+  color:red - no elemento h1 a cor sera mostrada em vermelho
+  text-align - alinhar o texto no meio 	
+} 
+
+<h1 class="page-title">
+     Conversor de moedas - colocar o class no html
+</h1>
+     depois chamar no css em vez de H1, chamar a classe submetida naquela estrutura(H1), utilizando .page-title {}
+Exemplo:
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+JAVA SCRIPT
+
+* alert = cria uma alerta na pagina com o conteudo passado dentro dele EX: alert("Olá")
+* prompt = usuario escrever em um caixa de texto, parecido com o alert()
+* parseInt = transforma uma string ou outro tipo de dado em numeros inteiros Ex:11
+* parseFloat = transforma uma string ou outro tipo de dado em numeros decimais Ex:11.956
+* .tofixed = função que ficxa quantas casas decimais vc quer após a virgula Ex: valorEmReal.toFixed(2) 11.95
+* document.write = (escreva no documento) 
+* break = usar para sair de um laço de repetição caso a alternativa seja a correta 
+* console.log = retorna a mensagem dentro do Log do navegador, não na tela do usuario
+* Math.random = biblioteca do JS que retorna um numero aleatorio. Se multiplicado por cima, sobe duas casas a virgula EX: 0.91452 * 10 = 9.1452. OBS: se colocar o parseInt o numero retorna interio EX: 9.14 = 9
+* .push = coloca dentro de um array algum valor EX : filmes.push("Star Wars") - filmes seria o array e o "Star Wars" seria a variavel colcada dentro do array
+* .length = função para analisar quantos elementos possui dentro de um array EX: var frutas = ["Maçã","Banana"] / console.log(frutas.length) = 2
+* document.querySelector = função que captuyra elementos no HTML Ex: var campoFilmeFavorito = document.querySelector('#filme') -> irá capturar TODO o input descrito na linha 6 
+* .value = função que captura apenas o valor desejado EX: var campoFilmeFavorito = document.querySelector('#filme').valeu -> irá capturar apenas o que foi digitado dentro do input -> Toy Story
+* innerHTML = retorna todo o texto e o html que existem no elemento. Ele retorna todo o html existente, retornando também às tags, e não somente o texto
+* endsWith = analisa o final de algo escrito e retorna verdadeiro ou falso EX filmes.endWith(".jpg") -> se terminar em .jpg vai ser verdadeiro e se não irá recusar a condição
+* getElementById = faz referencia ao ID do HTML 
+* .disabled = função para habilitar ou desabilitar button, possui duas condições true ou false Ex:document.getElementById('btnSortear').disabled = true
+* .checked = verifica se a opção foi marcada Ex  if (radioAtributo[i].checked){ return radioAtributo[i].value}
+* .splice = metodo que retira o elemento que esta sendo percorrido, precisa de 2 parametros o indice (0,1,2,3) do array e a quantidade de elementos a ser retirado (1) EX: cartas.splice(numeroCartaMaquina, 1)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Observações:
+
+* É possivel usar o document.write para gravar as informações dentro do html, passando o lugar que a resposta apareça. EX: document.write("<h2>" resultado "</h2>")
+* Para realizar comparações sempre irá usar dois operadores EX: condição1 == condição2 = resultado. Só um = é para realizar apenas atribuição
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Estruturas
+* if else if = sempre bom ao final do else if colocar um else finalizando caso nenhuma das condições venham ser selecionadas: EX: Escolha opção 1 ou 2 ou 3, mas é escolhida a opção 4, retornando no ultimo else
+
+if (condição1){
+  executar caso condição1 seja verdadeira
+} else if (condição2){
+  executar caso condição2 seja verdadeira
+}
+
+* while = reptir algo até que seja comprida a condição
+
+var tentativas = 3
+while (tentativas > 0) {
+  tentativas = tentativas - 1
+}
+
+
+* for = muito usada para iterar (pecorrer) dentro de um array 
+OBS: para cada uma das partes do for precisa do ; e seguindo o exemplo do while, não precisaria ser a variavel i, poderia ser tentativas = 3 for (var tentativas = 3; tentativas > 0; tentativas--)
+partes do For:
+1 - declaração da variavel var i = 3 
+2 - declaração da condição que sera usada no for para ver se a condição deve continuar executando dentro do laço ou não 
+3 - declaração do valor que a variavel vai ser atribuida EX i-- = i = i - 1 / dentro do exemplo a variavel ficaria i = 2  
+
+Duas formas de se fazer esse for 
+
+1->
+var filmes = ["Star Wars", "Toy Story", "Interestellar"]
+
+for (var i = 2; i >= 0 ; i--){
+  console.log(filmes[i])
+}
+
+resultado = "Interestellar", "Toy Story", "Star Wars"
+
+obs: a variavel i está recebendo 2 que seria o numero total de indices do array (0, 1, 2), sendo assim esse for iria mostrar no console todos os filmes salvos dentro do array filmes
+
+2->
+var filmes = ["Star Wars", "Toy Story", "Interestellar"
+
+for (var i = 0; i <= 2 ; i++){
+  console.log(filmes[i])
+}
+
+resultado = "Star Wars", "Toy Story", "Interestellar" 
+
+obs: a ordem mostrada do array altera 
+
+Melhor formar para ser fazer nesse caso para nao precisar mais alterar manualmente o total de indices que o array tem: 
+var filmes = ["Interestellar", "Toy Story", "Star Wars", "Esqueceram de mim", "Marley e eu"]
+
+for (var i = 0; i < filmes.length; i++){
+  console.log(filmes[i])
+}
+OBS: usando a variavel filmes com a função length pegando todos os indices do array 
+
+Forma de salvar imagens em um array e exibir em uma pagina, usando document.write e as tags html
+
+var listaFilmes = ["dento do array seria os links das imagens","https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg"]
+
+for(var i = 0; i < listaFilmes.length; i++){
+  document.write("<img src=" + listaFilmes[i] + ">")
+}
+
+OBS: foi passado dentro do document.write a tag HTML <img> e o src que seria o caminho da imagem, que no casa estava dentro do link no array
+
+* Objeto = são variaveis que contem propriedades dentro delas Ex: OBJETO cachorro -> pode ter o atributo COR ou IDADE
+  * exemplo do execrcicio, os objeto jogadores vão ter os atributos -> nome, vitorias, empates, derrotas e o numero de pontos que vai ser calculcado 
+  estrutura do objeto:
+
+  var paulo = {
+  nome:"paulo",
+  vitorias: 2,
+  empates: 5,
+  derrotas: 1,
+  pontos: 0
+}
+console.log(paulo)
+Observações: atributos e valores são dividos por : e é possivel imprimar no console apenas o atributo desejado Ex: console.log(paulo.vitorias)
+
+Existe a opção de colocar objetos dentro de objetos Ex
+var cartaPaulo = {
+  nome: "Seiya de Pegaso",
+  atributos:{
+    ataque: 86,
+    defesa: 60,
+    magia: 90
+  } 
+}
+OBS: atributos é um objeto dentro do objeto cartaPaulo
+
+
+Funções 
+* a função calcularPontos recebe como parametro 'jogador' e calcula os pontos seguindo a logica que cada vitoria vale 3 ponto e empates vale um.
+* esses atributos vitorias e empates são declarodos dentro do objeto 'rafa', onde ele vai ser usado como parametro na hora de chamar a função calcularPontos
+* pode chamar a função e depois construila que o JS irá compilar as informações normalmente, nãp precisa ser uma embaixo da outra 
+rafa.pontos = calcularPontos(rafa)
+
+function calcularPontos(jogador)
+{
+  var pontos = (jogador.vitorias * 3) + jogador.empates
+  return pontos 
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Termos
+* Refatoração = retirar certas linhas de codigos que não estam sendo mais usadas 
+* Palavras reservadas = palavras que possuem um funcionalidade especifica = return ou new ou this 
+* Interpolação = o uso das crases `` para em vezes de usar conctaneção + variaveis +, passa direto dentro dela e reconhece a url da imagem EX: divCartaJogador.style.backgroundImage=`url(${cartaJogador.imagem})`
